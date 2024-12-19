@@ -1,6 +1,0 @@
-
-
-return {
-    handleDragStart,
-    handleDragEnd
-}
