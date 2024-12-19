@@ -1,0 +1,160 @@
+@import url('https://fonts.cdnfonts.com/css/xmas-sweater-stitch');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scrollbar-width: thin;
+    scrollbar-color: white #222;
+}
+
+body{
+    background-color: #222;
+    font-family: 'Xmas Sweater Stitch', sans-serif;
+    user-select: none;
+}
+
+.top_header{
+    color: #09f;
+    text-align: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.tier{
+    width: 600px;
+    margin: auto;
+    display: flex;
+    flex-flow: nowrap column;
+    gap: 4px;
+}
+
+.row{
+    background-color: #111;
+    border-radius: 8px;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: nowrap;
+    align-items: center;
+    transition: transform .6s ease-out;
+
+    &.drag__over{
+        transform: scale(1.05);
+        background-color: rgba(0, 153, 255, 0.2);
+    }
+}
+
+.label{
+    display: flex;
+    gap: 4px;
+    width: 80px;
+    height: 80px;
+    background-color: var(--bg, #09f);
+    display: flex;
+    font-size: 3.5rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: inherit;
+    
+
+    & span{
+        color: white;
+
+        &:focus{
+            outline: none;
+        }
+    }
+}
+
+#selector{
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    flex-flow: nowrap column;
+    gap: 1rem;
+    align-items: center;
+
+    & span{
+        color: whitesmoke;
+        font-size: 2rem;
+    }
+}
+
+#selector_buttons{
+    display: flex;
+    gap: 1rem;
+
+    & label, & button{
+        padding: 4px;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        background-color: #111;
+        border: none;
+        outline: none;
+        border-radius: 8px;
+        transition: transform .5s ease-out;
+
+        &:hover{
+            transform: scale(1.1);
+        }
+
+        & svg{
+            width: 100%;
+        }
+    }
+}
+
+#selector_items{
+    width: 80%;
+    min-height: 114px;
+    border-radius: 8px;
+    border: 1px solid rgba(245, 245, 245, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    position: relative;
+
+    &.drawOver{
+        background-color: gray;
+        border: dashed;
+
+        /* &::after{
+            display: block;
+            content: "Suelta imagenes aquí";
+            font-size: 4rem;
+            color: #09f;
+            width: fit-content;
+            height: fit-content;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+        } */
+    }
+}
+
+.item_image{
+    height: 80px;
+    width: 80px;
+    object-fit: cover;
+    border-radius: inherit;
+    cursor: move;
+    
+    &:hover{
+        cursor: pointer;
+    }
+
+    &.preview_element{
+        opacity: 0.2;
+        /* desactiva la interaccion con eventos. --click, hover, etc. */
+        pointer-events: none;
+    }
+}

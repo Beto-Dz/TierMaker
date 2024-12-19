@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>TierMaker nativo</title>
+</head>
+<body>
+    <header class="top_header">TierMaker</header>
+
+    <section class="tier">
+        <div class="row">
+            <aside class="label" style="--bg: #003049">
+                <span contenteditable="true">1</span>
+            </aside>
+        </div>
+        <div class="row">
+            <aside class="label" style="--bg: #fb6f92">
+                <span contenteditable="true">2</span>
+            </aside>
+        </div>
+        <div class="row">
+            <aside class="label" style="--bg: #00afb9">
+                <span contenteditable="true">3</span>
+            </aside>
+        </div>
+        <div class="row">
+            <aside class="label" style="--bg: #d62828">
+                <span contenteditable="true">4</span>
+            </aside>
+        </div>
+        <div class="row">
+            <aside class="label" style="--bg: #588157">
+                <span contenteditable="true">5</span>
+            </aside>
+        </div>
+        <div class="row">
+            <aside class="label" style="--bg: #f07167">
+                <span contenteditable="true">6</span>
+            </aside>
+        </div>
+    </section>
+
+    <footer id="selector">
+        <section id="selector_buttons">
+            <label for="image_input">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+                <!-- indicamos que acepte multiples imagenes, que solo acepte imagenes -->
+                <input multiple id="image_input" name="image_input" type="file" accept="image/*" hidden/>
+            </label>
+
+            <button id="reset_tier_button" type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
+                </svg>                  
+            </button>
+            <button id="save_tier_button" type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                </svg>                  
+            </button>
+        </section>
+
+        <span>Elementos disponibles:</span>
+        <section id="selector_items">
+            
+        </section>
+    </footer>
+    <script src="index.js" defer></script>
+</body>
+</html>
